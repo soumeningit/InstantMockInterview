@@ -99,7 +99,7 @@ export async function GET(req, { params }) {
         }));
         console.log("mailResponse : " + mailResponse);
 
-        return NextResponse.redirect(`http://localhost:3000/success/${transactionId}`, {
+        return NextResponse.redirect(`https://instant-mock-interview.vercel.app/success/${transactionId}`, {
             status: 302,
         });
 

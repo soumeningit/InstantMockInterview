@@ -47,12 +47,12 @@ export async function POST(NextRequest) {
         const resetUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/reset-password?token=${encryptedToken}`;
         const resetURLResponse = await mailSender(email, "Forget Password", passwordResetEmailTemplate(resetUrl));
         console.log("resetURLResponse : " + resetURLResponse);
-        const redirectUrl = response.data.data.instrumentResponse.redirectInfo.url;
+        // const redirectUrl = response.data.data.instrumentResponse.redirectInfo.url;
 
         return NextResponse.json({
             success: true,
             message: "Check Your Email",
-            redirectUrl: redirectUrl
+            // redirectUrl: redirectUrl
         }, { status: 200 })
     } catch (error) {
         console.log("error : " + error);
