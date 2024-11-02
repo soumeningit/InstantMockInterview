@@ -3,8 +3,10 @@ import FAQ from "@/component/FAQ";
 import Footer from "@/component/Footer";
 import HowToProceed from "@/component/HowToProceed";
 import Testimonials from "@/component/Testimonials";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useSelector } from "react-redux";
 
 const jobDescriptions = [
   { id: 1, title: "Business Analyst" },
@@ -15,6 +17,17 @@ const jobDescriptions = [
 ];
 
 function HomePage() {
+  const { token } = useSelector((state) => state.auth);
+  const userId = useSelector((state) => state.auth.user);
+  const router = useRouter();
+
+  function handleGetStarted() {
+    if (token && userId) {
+      router.push(`/dashboard/profile/${userId}`);
+    } else {
+      router.push("/login");
+    }
+  }
   return (
     <>
       <div className="p-4 flex flex-col bg-[rgb(255,255,255)] ">
@@ -27,7 +40,10 @@ function HomePage() {
             Get ready to ace your next interview with our AI-Powered Interview
             Prep.
           </p>
-          <button className="px-6 py-2 mt-5 bg-gradient-to-r from-blue-400 via-teal-500 to-purple-600 rounded-l-full rounded-r-full hover:scale-105 transition ease-out duration-300 ">
+          <button
+            onClick={handleGetStarted}
+            className="px-6 py-2 mt-5 bg-gradient-to-r from-blue-400 via-teal-500 to-purple-600 rounded-l-full rounded-r-full hover:scale-105 transition ease-out duration-300 "
+          >
             <span className="ml-2 text-zinc-200 space-x-4 flex flex-row">
               Get Started{" "}
               <FaArrowRightLong className="mt-[0.2rem] ml-[0.5rem]" />

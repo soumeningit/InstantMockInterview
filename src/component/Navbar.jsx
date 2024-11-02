@@ -88,8 +88,12 @@ function Navbar() {
                   />
                 ) : (
                   <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
-                    {/* Placeholder for loading or no image */}
-                    <span className="text-gray-500">No Image</span>
+                    <img
+                      src="./profileimageavtar.jpg"
+                      className="w-8 h-8 rounded-full"
+                      alt="userPhoto"
+                      onClick={handleDropDown}
+                    />
                   </div>
                 )}
               </button>
