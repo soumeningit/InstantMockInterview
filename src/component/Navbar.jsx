@@ -42,7 +42,7 @@ function Navbar() {
     setShow(!show);
   }
 
-  console.log("userDetails?.image" + userDetails?.image);
+  // console.log("userDetails?.image" + userDetails?.image);
 
   return (
     <>

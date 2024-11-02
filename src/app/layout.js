@@ -3,6 +3,7 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import Navbar from "@/component/Navbar";
 import { Providers } from "./redux/provider";
+import { Suspense } from "react";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -29,7 +30,9 @@ export default function RootLayout({ children }) {
         <Providers>
           <Toaster />
           <Navbar />
-          {children}
+          <Suspense>
+            {children}
+          </Suspense>
         </Providers>
       </body>
     </html>
