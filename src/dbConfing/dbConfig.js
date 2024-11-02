@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export async function dbConnect() {
-    console.log("Database Url : " + process.env.DATABASE_URL)
+    // console.log("Database Url : " + process.env.DATABASE_URL)
     mongoose.connect(process.env.DATABASE_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true

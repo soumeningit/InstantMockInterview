@@ -132,16 +132,6 @@ function OTPVerification() {
         </div>
       </main>
 
-      {/* Page footer */}
-      <footer className="absolute left-6 right-6 md:left-12 md:right-auto bottom-4 md:bottom-8 text-center md:text-left">
-        <a
-          className="text-xs text-slate-500 hover:underline"
-          href="https://cruip.com"
-        >
-          &copy;Cruip - Tailwind CSS templates
-        </a>
-      </footer>
-
       {/* Banner with links */}
       {bannerOpen && (
         <div className="fixed bottom-0 right-0 w-full md:bottom-6 md:right-12 md:w-auto z-50">
@@ -149,7 +139,7 @@ function OTPVerification() {
             <div className="text-slate-500 inline-flex">
               <a
                 className="font-medium hover:underline text-slate-300"
-                href="https://cruip.com/otp-form-example-made-with-tailwind-css-and-javascript/"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
               >

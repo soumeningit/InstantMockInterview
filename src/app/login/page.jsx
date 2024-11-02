@@ -29,7 +29,7 @@ function LoginPage() {
       const response = await axios.post("/api/users/login", formData);
       setLoading(false);
       toast.remove();
-      console.log("log in response : " + JSON.stringify(response));
+      // console.log("log in response : " + JSON.stringify(response));
       dispatch(setToken(response?.data?.token));
       dispatch(setUser(response?.data?.user?._id));
       dispatch(setDetails(JSON.stringify(response?.data?.user)));
