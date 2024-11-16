@@ -15,6 +15,7 @@ const links = [
 function Navbar() {
   const [show, setShow] = useState(false);
   const [isClient, setIsClient] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const dropdownRef = useRef(null);
 
@@ -45,88 +46,212 @@ function Navbar() {
   // console.log("userDetails?.image" + userDetails?.image);
 
   return (
+    // <>
+    //   {isClient && (
+    //     <nav className="sticky top-0 bg-white h-[4rem] flex flex-row items-center justify-between shadow-md">
+    //       <div className="h-[2.9rem] w-[2.9rem] rounded-full border-1 border-gray-400 shadow-sm ml-[1rem] flex items-center justify-center">
+    //         <Link href="/">
+    //           <img
+    //             src="https://res.cloudinary.com/dvb4dvz1m/image/upload/v1730119934/logo_f10fr4.svg"
+    //             alt="company logo"
+    //             loading="lazy"
+    //             className="h-[2.5rem] w-[2rem] rounded-full "
+    //           />
+    //         </Link>
+    //       </div>
+    //       <div className="flex flex-row space-x-4 text-md text-ellipsis">
+    //         {links.map((link, id) => (
+    //           <Link key={id} href={link.href}>
+    //             <ul className="text-gray-600 transition duration-300 ease-in-out hover:text-teal-400">
+    //               {link.label}
+    //             </ul>
+    //           </Link>
+    //         ))}
+    //       </div>
+    //       {token ? (
+    //         <div
+    //           className="mr-5 flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
+    //           // ref={dropdownRef}
+    //         >
+    //           <button className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+    //             {/* <img
+    //               className="w-8 h-8 rounded-full"
+    //               src={userDetails?.image}
+    //               alt="userPhoto"
+    //               onClick={handleDropDown}
+    //             /> */}
+    //             {userDetails?.image ? (
+    //               <img
+    //                 className="w-8 h-8 rounded-full"
+    //                 src={userDetails.image}
+    //                 alt="userPhoto"
+    //                 onClick={handleDropDown}
+    //                 loading="lazy"
+    //               />
+    //             ) : (
+    //               <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+    //                 <img
+    //                   src="./profileimageavtar.jpg"
+    //                   className="w-8 h-8 rounded-full"
+    //                   alt="userPhoto"
+    //                   onClick={handleDropDown}
+    //                   loading="lazy"
+    //                 />
+    //               </div>
+    //             )}
+    //           </button>
+    //           <button
+    //             className="inline-flex mr-4 items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+    //             aria-label="Open main menu"
+    //           >
+    //             <span className="sr-only">Open main menu</span>
+    //             <svg
+    //               className="w-5 h-5"
+    //               aria-hidden="true"
+    //               xmlns="http://www.w3.org/2000/svg"
+    //               fill="none"
+    //               viewBox="0 0 17 14"
+    //             >
+    //               <path
+    //                 stroke="currentColor"
+    //                 strokeLinecap="round"
+    //                 strokeLinejoin="round"
+    //                 strokeWidth="2"
+    //                 d="M1 1h15M1 7h15M1 13h15"
+    //               />
+    //             </svg>
+    //           </button>
+    //         </div>
+    //       ) : (
+    //         <div className="flex flex-row space-x-4 mr-4">
+    //           <Link href="/signup">SignUp</Link>
+    //           <Link href="/login">Login</Link>
+    //         </div>
+    //       )}
+    //       <ProfileDropDown show={show} setShow={setShow} />
+    //     </nav>
+    //   )}
+    // </>
+
     <>
       {isClient && (
-        <nav className="sticky top-0 bg-white h-[4rem] flex flex-row items-center justify-between shadow-md">
-          <div className="h-[2.9rem] w-[2.9rem] rounded-full border-1 border-gray-400 shadow-sm ml-[1rem] flex items-center justify-center">
-            <Link href="/">
+        <nav className="sticky top-0 bg-white h-[4rem] flex items-center justify-between shadow-md px-4">
+          {/* Logo Section */}
+          <div className="flex items-center">
+            <Link href="/" aria-label="Company Home">
               <img
                 src="https://res.cloudinary.com/dvb4dvz1m/image/upload/v1730119934/logo_f10fr4.svg"
-                alt="company logo"
+                alt="Company logo"
                 loading="lazy"
-                className="h-[2.5rem] w-[2rem] rounded-full "
+                className="h-[2.5rem] w-[2rem] rounded-full"
               />
             </Link>
           </div>
-          <div className="flex flex-row space-x-4 text-md text-ellipsis">
+
+          {/* Links Section (Visible on larger screens) */}
+          <div className="hidden md:flex space-x-4 text-gray-600">
             {links.map((link, id) => (
-              <Link key={id} href={link.href}>
-                <ul className="text-gray-600 transition duration-300 ease-in-out hover:text-teal-400">
-                  {link.label}
-                </ul>
+              <Link key={id} href={link.href} className="hover:text-teal-400">
+                {link.label}
               </Link>
             ))}
           </div>
-          {token ? (
-            <div
-              className="mr-5 flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
-              // ref={dropdownRef}
-            >
-              <button className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
-                {/* <img
+
+          {/* Profile Section for Larger Screens */}
+          <div className="hidden md:flex items-center space-x-3">
+            {token ? (
+              <button
+                onClick={handleDropDown}
+                className="flex items-center space-x-2 text-sm"
+              >
+                <img
+                  src={userDetails?.image || "./profileimageavtar.jpg"}
                   className="w-8 h-8 rounded-full"
-                  src={userDetails?.image}
-                  alt="userPhoto"
-                  onClick={handleDropDown}
-                /> */}
-                {userDetails?.image ? (
-                  <img
-                    className="w-8 h-8 rounded-full"
-                    src={userDetails.image}
-                    alt="userPhoto"
+                  alt="User avatar"
+                  loading="lazy"
+                />
+              </button>
+            ) : (
+              <div className="flex space-x-4">
+                <Link href="/signup" className="hover:text-teal-400">
+                  SignUp
+                </Link>
+                <Link href="/login" className="hover:text-teal-400">
+                  Login
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle mobile menu"
+            className="p-2 w-10 h-10 text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none"
+          >
+            <svg
+              className="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+
+          {/* Mobile Dropdown Menu */}
+          {isMenuOpen && (
+            <div className="absolute top-[4rem] left-0 w-full bg-white shadow-md p-4 md:hidden">
+              {/* Mobile Links */}
+              <div className="flex flex-col space-y-4 text-gray-600">
+                {links.map((link, id) => (
+                  <Link
+                    key={id}
+                    href={link.href}
+                    className="hover:text-teal-400"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Profile Links */}
+              <div className="mt-4 border-t pt-4 flex flex-col space-y-3">
+                {token ? (
+                  <button
                     onClick={handleDropDown}
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+                    className="flex items-center space-x-2 text-sm"
+                  >
                     <img
-                      src="./profileimageavtar.jpg"
+                      src={userDetails?.image || "./profileimageavtar.jpg"}
                       className="w-8 h-8 rounded-full"
-                      alt="userPhoto"
-                      onClick={handleDropDown}
+                      alt="User avatar"
                       loading="lazy"
                     />
+                    <span className="text-gray-600">Profile</span>
+                  </button>
+                ) : (
+                  <div className="flex flex-col space-y-2">
+                    <Link href="/signup" className="hover:text-teal-400">
+                      SignUp
+                    </Link>
+                    <Link href="/login" className="hover:text-teal-400">
+                      Login
+                    </Link>
                   </div>
                 )}
-              </button>
-              <button
-                className="inline-flex mr-4 items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                aria-label="Open main menu"
-              >
-                <span className="sr-only">Open main menu</span>
-                <svg
-                  className="w-5 h-5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 17 14"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M1 1h15M1 7h15M1 13h15"
-                  />
-                </svg>
-              </button>
-            </div>
-          ) : (
-            <div className="flex flex-row space-x-4 mr-4">
-              <Link href="/signup">SignUp</Link>
-              <Link href="/login">Login</Link>
+              </div>
             </div>
           )}
+
+          {/* Profile Dropdown */}
           <ProfileDropDown show={show} setShow={setShow} />
         </nav>
       )}

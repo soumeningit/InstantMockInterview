@@ -43,21 +43,128 @@ function ContactUs() {
   }
 
   return (
+    // <>
+    //   <div className="flex flex-col font-sans bg-white">
+    //     <h1 className="text-2xl font-bold mx-auto">Contact Us</h1>
+    //     <div className="flex items-center justify-center align-middle mx-auto w-full relative mt-[10rem]">
+    //       <div className="w-7/12 flex flex-row space-x-6 items-center justify-center align-middle">
+    //         <div className="border-gray-200 shadow-md my-2 rounded-md bg-slate-800 p-4 items-start">
+    //           <div className="space-y-2 mb-5 p-2">
+    //             <h2 className="text-xl font-bold text-gray-200">
+    //               Contact Information
+    //             </h2>
+    //             <p className="text-base text-gray-300">
+    //               Thanks for contacting Us. We are happy to help you
+    //             </p>
+    //             <p className="text-base text-gray-300">
+    //               Feel free to give any suggestion.
+    //             </p>
+    //           </div>
+    //           <div className="mt-4 space-y-6">
+    //             <p className="flex flex-row text-base text-gray-200">
+    //               <CgMail className="text-base mt-[0.3rem] mr-2" />
+    //               info@example.com
+    //             </p>
+    //             <p className="flex flex-row text-base text-gray-200">
+    //               <MdOutlinePhone className="text-base mt-[0.3rem] mr-2" />
+    //               +91-6548793245
+    //             </p>
+    //           </div>
+    //           <div className="mt-4 mb-2 flex flex-row space-x-4 text-2xl cursor-pointer">
+    //             <FaInstagram className="text-gray-500 hover:text-pink-500 transform hover:scale-110 transition duration-300" />
+    //             <FaLinkedin className="text-gray-500 hover:text-blue-600 transform hover:scale-110 transition duration-300" />
+    //             <FaTwitter className="text-gray-500 hover:text-blue-400 transform hover:scale-110 transition duration-300" />
+    //           </div>
+    //         </div>
+    //         <div className="bg-zinc-200 shadow-md rounded-md p-4 w-full gap-6 my-2">
+    //           <form
+    //             onSubmit={handleSubmit}
+    //             className="grid grid-cols-2 relative"
+    //           >
+    //             <div className="flex flex-col p-2">
+    //               <label htmlFor="name">Your Name : </label>
+    //               <input
+    //                 type="text"
+    //                 id="name"
+    //                 name="name"
+    //                 value={formData.name}
+    //                 onChange={changeHandler}
+    //                 className="outline-none border-2 border-gray-200 rounded-md p-2 shadow-sm focus:border-2 focus:border-teal-500 bg-gray-700 text-gray-200 focus:bg-slate-300 focus:text-zinc-800"
+    //               />
+    //             </div>
+    //             <div className="flex flex-col p-2">
+    //               <label htmlFor="email">Your Email : </label>
+    //               <input
+    //                 type="email"
+    //                 id="email"
+    //                 name="email"
+    //                 value={formData.email}
+    //                 onChange={changeHandler}
+    //                 className="outline-none border-2 border-gray-200 rounded-md p-2 shadow-sm focus:border-2 focus:border-teal-500 bg-gray-700 text-gray-200 focus:bg-slate-300 focus:text-zinc-800"
+    //               />
+    //             </div>
+    //             <div className="flex flex-col p-2">
+    //               <label htmlFor="phone">Phone : </label>
+    //               <input
+    //                 type="text"
+    //                 id="phone"
+    //                 name="phone"
+    //                 value={formData.phone}
+    //                 onChange={changeHandler}
+    //                 className="outline-none border-2 border-gray-200 rounded-md p-2 shadow-sm focus:border-2 focus:border-teal-500 bg-gray-700 text-gray-200 focus:bg-slate-300 focus:text-zinc-800"
+    //               />
+    //             </div>
+    //             <div className="flex flex-col p-2">
+    //               <label htmlFor="message">Country : </label>
+    //               <input
+    //                 type="text"
+    //                 name="country"
+    //                 value={formData.country}
+    //                 onChange={changeHandler}
+    //                 className="outline-none border-2 border-gray-200 rounded-md p-2 shadow-sm focus:border-2 focus:border-teal-500 bg-gray-700 text-gray-200 focus:bg-slate-300 focus:text-zinc-800"
+    //               />
+    //             </div>
+    //             <div className="flex flex-col p-2">
+    //               <label htmlFor="message">Message : </label>
+    //               <textarea
+    //                 name="message"
+    //                 id="message"
+    //                 value={formData.message}
+    //                 onChange={changeHandler}
+    //                 className="outline-none border-2 border-gray-200 rounded-md p-2 shadow-sm focus:border-2 focus:border-teal-500 bg-gray-700 text-gray-200 focus:bg-slate-300 focus:text-zinc-800"
+    //               />
+    //             </div>
+    //             <div className="absolute right-4 bottom-4 flex flex-row bg-blue-600 text-white rounded-md hover:bg-blue-400 hover:scale-105 transition ease-out duration-300">
+    //               <button
+    //                 type="submit"
+    //                 className="px-4 py-2 text-xl text-pretty text-center flex flex-row"
+    //               >
+    //                 Send <TbSend className="text-xl ml-2 mt-[0.2rem]" />
+    //               </button>
+    //             </div>
+    //           </form>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </>
+
     <>
       <div className="flex flex-col font-sans bg-white">
-        <h1 className="text-2xl font-bold mx-auto">Contact Us</h1>
-        <div className="flex items-center justify-center align-middle mx-auto w-full relative mt-[10rem]">
-          <div className="w-7/12 flex flex-row space-x-6 items-center justify-center align-middle">
-            <div className="border-gray-200 shadow-md my-2 rounded-md bg-slate-800 p-4 items-start">
-              <div className="space-y-2 mb-5 p-2">
+        <h1 className="text-2xl font-bold mx-auto mt-10">Contact Us</h1>
+        <div className="flex items-center justify-center mx-auto w-full relative mt-10">
+          <div className="w-11/12 md:w-7/12 flex flex-col md:flex-row space-y-6 md:space-y-0 items-center justify-center md:justify-start gap-6 md:gap-12">
+            {/* Contact Info Section */}
+            <div className="border-gray-200 shadow-md rounded-md bg-slate-800 p-6 w-full">
+              <div className="space-y-4">
                 <h2 className="text-xl font-bold text-gray-200">
                   Contact Information
                 </h2>
                 <p className="text-base text-gray-300">
-                  Thanks for contacting Us. We are happy to help you
+                  Thanks for contacting us. We are happy to help you.
                 </p>
                 <p className="text-base text-gray-300">
-                  Feel free to give any suggestion.
+                  Feel free to give any suggestions.
                 </p>
               </div>
               <div className="mt-4 space-y-6">
@@ -70,19 +177,21 @@ function ContactUs() {
                   +91-6548793245
                 </p>
               </div>
-              <div className="mt-4 mb-2 flex flex-row space-x-4 text-2xl cursor-pointer">
+              <div className="mt-4 mb-2 flex flex-row space-x-4 text-2xl cursor-pointer justify-center md:justify-start">
                 <FaInstagram className="text-gray-500 hover:text-pink-500 transform hover:scale-110 transition duration-300" />
                 <FaLinkedin className="text-gray-500 hover:text-blue-600 transform hover:scale-110 transition duration-300" />
                 <FaTwitter className="text-gray-500 hover:text-blue-400 transform hover:scale-110 transition duration-300" />
               </div>
             </div>
-            <div className="bg-zinc-200 shadow-md rounded-md p-4 w-full gap-6 my-2">
+
+            {/* Contact Form Section */}
+            <div className="bg-zinc-200 shadow-md rounded-md p-6 w-full">
               <form
                 onSubmit={handleSubmit}
-                className="grid grid-cols-2 relative"
+                className="grid grid-cols-1 md:grid-cols-2 gap-4"
               >
                 <div className="flex flex-col p-2">
-                  <label htmlFor="name">Your Name : </label>
+                  <label htmlFor="name">Your Name: </label>
                   <input
                     type="text"
                     id="name"
@@ -93,7 +202,7 @@ function ContactUs() {
                   />
                 </div>
                 <div className="flex flex-col p-2">
-                  <label htmlFor="email">Your Email : </label>
+                  <label htmlFor="email">Your Email: </label>
                   <input
                     type="email"
                     id="email"
@@ -104,7 +213,7 @@ function ContactUs() {
                   />
                 </div>
                 <div className="flex flex-col p-2">
-                  <label htmlFor="phone">Phone : </label>
+                  <label htmlFor="phone">Phone: </label>
                   <input
                     type="text"
                     id="phone"
@@ -115,7 +224,7 @@ function ContactUs() {
                   />
                 </div>
                 <div className="flex flex-col p-2">
-                  <label htmlFor="message">Country : </label>
+                  <label htmlFor="country">Country: </label>
                   <input
                     type="text"
                     name="country"
@@ -125,7 +234,7 @@ function ContactUs() {
                   />
                 </div>
                 <div className="flex flex-col p-2">
-                  <label htmlFor="message">Message : </label>
+                  <label htmlFor="message">Message: </label>
                   <textarea
                     name="message"
                     id="message"
@@ -134,12 +243,12 @@ function ContactUs() {
                     className="outline-none border-2 border-gray-200 rounded-md p-2 shadow-sm focus:border-2 focus:border-teal-500 bg-gray-700 text-gray-200 focus:bg-slate-300 focus:text-zinc-800"
                   />
                 </div>
-                <div className="absolute right-4 bottom-4 flex flex-row bg-blue-600 text-white rounded-md hover:bg-blue-400 hover:scale-105 transition ease-out duration-300">
+                <div className="flex justify-center md:justify-end mt-4">
                   <button
                     type="submit"
-                    className="px-4 py-2 text-xl text-pretty text-center flex flex-row"
+                    className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-400 hover:scale-105 transition duration-300 flex items-center"
                   >
-                    Send <TbSend className="text-xl ml-2 mt-[0.2rem]" />
+                    Send <TbSend className="ml-2 text-xl" />
                   </button>
                 </div>
               </form>

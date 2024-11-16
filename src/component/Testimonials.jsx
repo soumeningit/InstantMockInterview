@@ -219,40 +219,80 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <section className="py-12 bg-gray-50 sm:py-16 lg:py-20">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center">
-          <p className="text-lg font-medium text-gray-600 font-pj">
-            Thousands of users trust our AI-powered mock interview platform.
-          </p>
-          <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">
-            What our clients say about us
-          </h2>
-        </div>
+    // <section className="py-12 bg-gray-50 sm:py-16 lg:py-20">
+    //   <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    //     <div className="flex flex-col items-center text-center">
+    //       <p className="text-lg font-medium text-gray-600 font-pj">
+    //         Thousands of users trust our AI-powered mock interview platform.
+    //       </p>
+    //       <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">
+    //         What our clients say about us
+    //       </h2>
+    //     </div>
 
-        <Slider {...settings} className="mt-10 md:mt-24">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="p-4">
-              <div className="flex flex-col overflow-hidden shadow-lg rounded-lg bg-white p-6 h-[18rem] w-[22rem]">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-16 h-16 rounded-full mx-auto mb-4"
-                />
-                <StarRating rating={testimonial.rating} />
-                <p className="text-gray-600 mb-4 text-center">
-                  {testimonial.feedback}
-                </p>
-                <div className="text-center">
-                  <h3 className="font-bold text-lg">{testimonial.name}</h3>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+    //     <Slider {...settings} className="mt-10 md:mt-24">
+    //       {testimonials.map((testimonial) => (
+    //         <div key={testimonial.id} className="p-4">
+    //           <div className="flex flex-col overflow-hidden shadow-lg rounded-lg bg-white p-6 h-[18rem] w-[22rem]">
+    //             <img
+    //               src={testimonial.image}
+    //               alt={testimonial.name}
+    //               className="w-16 h-16 rounded-full mx-auto mb-4"
+    //             />
+    //             <StarRating rating={testimonial.rating} />
+    //             <p className="text-gray-600 mb-4 text-center">
+    //               {testimonial.feedback}
+    //             </p>
+    //             <div className="text-center">
+    //               <h3 className="font-bold text-lg">{testimonial.name}</h3>
+    //               <p className="text-sm text-gray-500">{testimonial.role}</p>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       ))}
+    //     </Slider>
+    //   </div>
+    // </section>
+    <>
+      <section className="py-8 sm:py-12 lg:py-16 bg-gray-50">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center text-center">
+            <p className="text-base sm:text-lg font-medium text-gray-600 font-pj">
+              Thousands of users trust our AI-powered mock interview platform.
+            </p>
+            <h2 className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 font-pj">
+              What our clients say about us
+            </h2>
+          </div>
+
+          <Slider {...settings} className="mt-8 md:mt-12 lg:mt-16">
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className="p-2 sm:p-4">
+                <div className="flex flex-col overflow-hidden shadow-lg rounded-lg bg-white p-6 sm:p-8 h-[18rem] w-full max-w-[20rem] mx-auto">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-12 h-12 sm:w-16 sm:h-16 rounded-full mx-auto mb-3 sm:mb-4"
+                  />
+                  <StarRating rating={testimonial.rating} />
+                  <p className="text-gray-600 mt-2 mb-4 text-sm sm:text-base text-center">
+                    {testimonial.feedback}
+                  </p>
+                  <div className="text-center">
+                    <h3 className="font-semibold sm:font-bold text-base sm:text-lg">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-gray-500">
+                      {testimonial.role}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
-    </section>
+            ))}
+          </Slider>
+        </div>
+      </section>
+    </>
   );
 };
 

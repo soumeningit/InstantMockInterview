@@ -71,40 +71,86 @@ function FAQ() {
   const [openfaqId, setOpenfaqId] = useState(null);
 
   return (
-    <div className="flex flex-col items-center justify-center m-5 p-4 w-9/12 bg-[hsla(0,0%,100%,1)] shadow-md rounded-lg">
-      <div className="flex flex-col space-y-5">
-        <h1 className="text-2xl font-bold text-gray-900">
+    // <div className="flex flex-col items-center justify-center m-5 p-4 w-9/12 bg-[hsla(0,0%,100%,1)] shadow-md rounded-lg">
+    //   <div className="flex flex-col space-y-5">
+    //     <h1 className="text-2xl font-bold text-gray-900">
+    //       Frequently Asked Questions
+    //     </h1>
+    //     <p className="text-base text-zinc-700">
+    //       Here are some most asked questios. If you have any further queries
+    //       feel free to <Link href="/contact">recah us</Link>
+    //     </p>
+    //   </div>
+    //   <div className="flex flex-col w-3/5 mt-5">
+    //     {faqs.map((data, index) => (
+    //       <div
+    //         key={data.id}
+    //         className="flex flex-col space-y-2 p-4 rounded-md bg-gray-100 shadow-md"
+    //       >
+    //         <div className="flex justify-between">
+    //           <h2 className="text-lg font-bold text-gray-900">
+    //             {data.question}
+    //           </h2>
+    //           {openfaqId === data.id ? (
+    //             <FaMinus
+    //               onClick={() => setOpenfaqId(null)}
+    //               className="cursor-pointer"
+    //             />
+    //           ) : (
+    //             <FaPlus
+    //               onClick={() => setOpenfaqId(data.id)}
+    //               className="cursor-pointer"
+    //             />
+    //           )}
+    //         </div>
+    //         {openfaqId === data.id && (
+    //           <div className="text-base text-gray-400 bg-slate-800 border-1 border-teal-500 rounded-lg p-4">
+    //             {data.answer}
+    //           </div>
+    //         )}
+    //       </div>
+    //     ))}
+    //   </div>
+    // </div>
+
+    <div className="flex flex-col items-center justify-center mx-auto my-8 p-6 w-full sm:w-10/12 lg:w-9/12 bg-white shadow-md rounded-lg">
+      <div className="flex flex-col space-y-4 text-center sm:text-left">
+        <h1 className="text-xl sm:text-2xl font-bold text-gray-900">
           Frequently Asked Questions
         </h1>
-        <p className="text-base text-zinc-700">
-          Here are some most asked questios. If you have any further queries
-          feel free to <Link href="/contact">recah us</Link>
+        <p className="text-sm sm:text-base text-gray-700">
+          Here are some frequently asked questions. If you have any further
+          queries, feel free to{" "}
+          <Link href="/contact" className="text-teal-500 underline">
+            reach us
+          </Link>
+          .
         </p>
       </div>
-      <div className="flex flex-col w-3/5 mt-5">
-        {faqs.map((data, index) => (
+      <div className="flex flex-col w-full sm:w-4/5 lg:w-3/5 mt-5 space-y-4">
+        {faqs.map((data) => (
           <div
             key={data.id}
-            className="flex flex-col space-y-2 p-4 rounded-md bg-gray-100 shadow-md"
+            className="flex flex-col space-y-2 p-4 rounded-md bg-gray-100 shadow-sm"
           >
-            <div className="flex justify-between">
-              <h2 className="text-lg font-bold text-gray-900">
+            <div className="flex justify-between items-center">
+              <h2 className="text-md sm:text-lg font-semibold text-gray-900">
                 {data.question}
               </h2>
               {openfaqId === data.id ? (
                 <FaMinus
                   onClick={() => setOpenfaqId(null)}
-                  className="cursor-pointer"
+                  className="cursor-pointer text-teal-500"
                 />
               ) : (
                 <FaPlus
                   onClick={() => setOpenfaqId(data.id)}
-                  className="cursor-pointer"
+                  className="cursor-pointer text-teal-500"
                 />
               )}
             </div>
             {openfaqId === data.id && (
-              <div className="text-base text-gray-400 bg-slate-800 border-1 border-teal-500 rounded-lg p-4">
+              <div className="text-sm sm:text-base text-gray-700 bg-gray-50 border border-teal-500 rounded-lg p-4 mt-2">
                 {data.answer}
               </div>
             )}
