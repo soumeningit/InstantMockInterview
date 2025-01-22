@@ -106,10 +106,10 @@ function HowToProceed() {
     // </div>
     <>
       <div className="max-w-lg md:max-w-xl lg:max-w-3xl mx-auto mt-10 px-4">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-4 md:mb-6">
+        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-4 md:mb-6 text-gray-800">
           How To Proceed
         </h2>
-        <p className="text-base md:text-lg text-zinc-400 text-center">
+        <p className="text-base md:text-lg text-zinc-600 text-center">
           Here is a quick guide on how you can attend this interview.
         </p>
         <Slider {...settings} className="mt-6">

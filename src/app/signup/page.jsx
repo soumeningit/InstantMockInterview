@@ -273,7 +273,7 @@ function SignUpPage() {
                 onChange={changeHandler}
                 required
                 placeholder="Enter your full name "
-                className="p-3 mt-2 bg-white bg-opacity-50 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400"
+                className="p-3 mt-2 md:w-full sm:w-full bg-white bg-opacity-50 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400"
               />
             </div>
 

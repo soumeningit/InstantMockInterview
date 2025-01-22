@@ -10,6 +10,13 @@ export default function DashboardLayout({ children }) {
     const [activeLink, setActiveLink] = useState(null);
     const [open, setOpen] = useState(false);
 
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+
+    // Toggle Sidebar on Mobile
+    const toggleSidebar = () => {
+        setSidebarOpen(!sidebarOpen);
+    };
+
     const links = [
         { id: 1, name: "Profile", link: `/dashboard/profile/${userId}`, icon: "user" },
         { id: 2, name: "Dashboard", link: "/dashboard", icon: "dashboard" },

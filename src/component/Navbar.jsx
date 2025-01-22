@@ -173,10 +173,16 @@ function Navbar() {
               </button>
             ) : (
               <div className="flex space-x-4">
-                <Link href="/signup" className="hover:text-teal-400">
+                <Link
+                  href="/signup"
+                  className="text-gray-800 hover:text-teal-400"
+                >
                   SignUp
                 </Link>
-                <Link href="/login" className="hover:text-teal-400">
+                <Link
+                  href="/login"
+                  className="text-gray-800 hover:text-teal-400"
+                >
                   Login
                 </Link>
               </div>
@@ -246,16 +252,16 @@ function Navbar() {
                   //     Login
                   //   </Link>
                   // </div>
-                  <div className="flex flex-col space-y-2">
+                  <div className="flex flex-col space-y-2 text-gray-800">
                     <Link
                       href="/signup"
-                      className="text-lg font-semibold text-teal-600 hover:text-teal-400 transition duration-300 ease-in-out transform hover:scale-105"
+                      className="text-lg font-semibold text-gray-800 hover:text-teal-400 transition duration-300 ease-in-out transform hover:scale-105"
                     >
                       Sign Up
                     </Link>
                     <Link
                       href="/login"
-                      className="text-lg font-semibold text-teal-600 hover:text-teal-400 transition duration-300 ease-in-out transform hover:scale-105"
+                      className="text-lg font-semibold text-gray-800 hover:text-teal-400 transition duration-300 ease-in-out transform hover:scale-105"
                     >
                       Login
                     </Link>
