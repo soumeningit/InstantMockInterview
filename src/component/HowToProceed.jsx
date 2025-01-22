@@ -33,28 +33,10 @@ const steps = [
   },
 ];
 
-// const PrevArrow = ({ onClick }) => (
-//   <button
-//     onClick={onClick}
-//     className="absolute left-0 top-1/2 transform -translate-x-4 -translate-y-1/2 text-2xl text-gray-500 hover:text-gray-700 z-10 ml-2"
-//   >
-//     ◀
-//   </button>
-// );
-
-// const NextArrow = ({ onClick }) => (
-//   <button
-//     onClick={onClick}
-//     className="absolute right-3 top-1/2 transform -translate-y-1/2 text-2xl text-gray-500 hover:text-gray-700"
-//   >
-//     ▶
-//   </button>
-// );
-
 const PrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute left-2 md:left-3 lg:left-4 top-1/2 transform -translate-y-1/2 text-xl md:text-2xl lg:text-3xl text-gray-500 hover:text-gray-700 z-10"
+    className="absolute left-0 md:left-3 lg:left-4 top-1/2 transform -translate-y-1/2 text-xl md:text-2xl lg:text-3xl text-gray-500 hover:text-gray-700 z-10 mr-4"
   >
     ◀
   </button>
@@ -63,7 +45,7 @@ const PrevArrow = ({ onClick }) => (
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute right-2 md:right-3 lg:right-4 top-1/2 transform -translate-y-1/2 text-xl md:text-2xl lg:text-3xl text-gray-500 hover:text-gray-700"
+    className="absolute right-0 md:right-3 lg:right-4 top-1/2 transform -translate-y-1/2 text-xl md:text-2xl lg:text-3xl text-gray-500 hover:text-gray-700 ml-10"
   >
     ▶
   </button>
@@ -88,22 +70,6 @@ function HowToProceed() {
   };
 
   return (
-    // <div className="max-w-lg mx-auto mt-10">
-    //   <h2 className="text-2xl font-semibold text-center mb-6">
-    //     How To Proceed
-    //   </h2>
-    //   <p className="text-base text-zinc-400 text-center text-pretty">
-    //     Here is a quick guide how you can attend this interview.
-    //   </p>
-    //   <Slider {...settings}>
-    //     {steps.map((step, index) => (
-    //       <div key={index} className="px-6 py-8 bg-white shadow-md rounded-lg">
-    //         <h3 className="text-lg font-bold mb-2">{step.title}</h3>
-    //         <p className="text-gray-700">{step.description}</p>
-    //       </div>
-    //     ))}
-    //   </Slider>
-    // </div>
     <>
       <div className="max-w-lg md:max-w-xl lg:max-w-3xl mx-auto mt-10 px-4">
         <h2 className="text-2xl md:text-3xl font-semibold text-center mb-4 md:mb-6 text-gray-800">
@@ -112,16 +78,16 @@ function HowToProceed() {
         <p className="text-base md:text-lg text-zinc-600 text-center">
           Here is a quick guide on how you can attend this interview.
         </p>
-        <Slider {...settings} className="mt-6">
+        <Slider {...settings} className="mt-6 ml-6">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="px-4 py-6 sm:px-6 sm:py-8 bg-white shadow-md rounded-lg mx-2"
+              className="p-4 sm:px-6 sm:py-8 bg-white shadow-md rounded-lg ml-10 mr-10 max-w-2xl"
             >
-              <h3 className="text-lg md:text-xl font-bold mb-2">
+              <h3 className="text-lg md:text-xl font-bold mb-2 text-blue-900">
                 {step.title}
               </h3>
-              <p className="text-gray-700 text-sm md:text-base">
+              <p className="text-gray-900 text-sm md:text-base w-full">
                 {step.description}
               </p>
             </div>

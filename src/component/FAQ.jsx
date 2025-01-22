@@ -63,7 +63,7 @@ const faqs = [
     id: 10,
     question: "What should I do if I encounter technical issues?",
     answer:
-      "If you experience any technical issues, please contact our support team via the contact page, and we will assist you promptly.",
+      "If you experience any technical issues, please contact our support team via the contact page, and we will assist you .",
   },
 ];
 
@@ -71,48 +71,6 @@ function FAQ() {
   const [openfaqId, setOpenfaqId] = useState(null);
 
   return (
-    // <div className="flex flex-col items-center justify-center m-5 p-4 w-9/12 bg-[hsla(0,0%,100%,1)] shadow-md rounded-lg">
-    //   <div className="flex flex-col space-y-5">
-    //     <h1 className="text-2xl font-bold text-gray-900">
-    //       Frequently Asked Questions
-    //     </h1>
-    //     <p className="text-base text-zinc-700">
-    //       Here are some most asked questios. If you have any further queries
-    //       feel free to <Link href="/contact">recah us</Link>
-    //     </p>
-    //   </div>
-    //   <div className="flex flex-col w-3/5 mt-5">
-    //     {faqs.map((data, index) => (
-    //       <div
-    //         key={data.id}
-    //         className="flex flex-col space-y-2 p-4 rounded-md bg-gray-100 shadow-md"
-    //       >
-    //         <div className="flex justify-between">
-    //           <h2 className="text-lg font-bold text-gray-900">
-    //             {data.question}
-    //           </h2>
-    //           {openfaqId === data.id ? (
-    //             <FaMinus
-    //               onClick={() => setOpenfaqId(null)}
-    //               className="cursor-pointer"
-    //             />
-    //           ) : (
-    //             <FaPlus
-    //               onClick={() => setOpenfaqId(data.id)}
-    //               className="cursor-pointer"
-    //             />
-    //           )}
-    //         </div>
-    //         {openfaqId === data.id && (
-    //           <div className="text-base text-gray-400 bg-slate-800 border-1 border-teal-500 rounded-lg p-4">
-    //             {data.answer}
-    //           </div>
-    //         )}
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
-
     <div className="flex flex-col items-center justify-center mx-auto my-8 p-6 w-full sm:w-10/12 lg:w-9/12 bg-white shadow-md rounded-lg">
       <div className="flex flex-col space-y-4 text-center sm:text-left">
         <h1 className="text-xl sm:text-2xl font-bold text-gray-900">
