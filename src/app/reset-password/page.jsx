@@ -96,8 +96,10 @@ function ResetPassword() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="w-full max-w-md bg-white shadow-md rounded-lg p-6">
-        <h1 className="text-2xl font-bold text-center mb-4">Reset Password</h1>
-        <p className="text-center mb-4">
+        <h1 className="text-2xl font-bold text-center mb-4 text-gray-900">
+          Reset Password
+        </h1>
+        <p className="text-center mb-4 text-gray-900">
           Enter your new password and confirm it.
         </p>
 
@@ -118,7 +120,7 @@ function ResetPassword() {
               value={formData.password}
               onChange={changeHandler}
               required
-              className="p-3 mt-2 bg-gray-50 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400"
+              className="p-3 mt-2 bg-gray-600 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400"
             />
             <button
               type="button"
@@ -146,7 +148,7 @@ function ResetPassword() {
               value={formData.confirmPassword}
               onChange={changeHandler}
               required
-              className="p-3 mt-2 bg-gray-50 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400"
+              className="p-3 mt-2 bg-gray-600 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400"
             />
             <button
               type="button"
@@ -167,7 +169,7 @@ function ResetPassword() {
           <div className="flex flex-row justify-between text-base">
             <Link href={"/forgetpassword"}>
               <p className="text-red-500 text-sm font-bold mt-2">
-                if token xpired
+                if token Expired
               </p>
             </Link>
             <Link href={"/forgetpassword"}>

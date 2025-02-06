@@ -59,7 +59,7 @@ function ForgetPassword() {
             onChange={changeHandler}
             placeholder="Enter your registered email"
             required
-            className="w-full p-3 border rounded-md bg-gray-50 focus:outline-none focus:border-blue-500"
+            className="w-full p-3 border rounded-md bg-gray-600 focus:outline-none focus:border-blue-500"
           />
           {error && <p className="text-sm text-red-500">{error}</p>}
           <button

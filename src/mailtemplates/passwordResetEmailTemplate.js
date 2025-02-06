@@ -45,7 +45,7 @@ export function passwordResetEmailTemplate(resetUrl) {
             <p>You requested a password reset. Please click the button below to reset your password. This link will expire in 5 minutes:</p>
             <a href="${resetUrl}" class="button">Reset Password</a>
             <p>If you did not request a password reset, you can safely ignore this email.</p>
-            <p>Best regards,<br>Your App Team</p>
+            <p>Best regards,<br>Instant Interview Team</p>
             <div class="footer">
               <p>If you have questions, please contact our support team.</p>
             </div>

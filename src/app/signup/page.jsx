@@ -61,8 +61,8 @@ function SignUpPage() {
       // };
       // console.log("data : " + data);
       const response = await axios.post("/api/users/otpsender", formData);
-      console.log("response : " + response?.data);
-      console.log("response : " + JSON.stringify(response?.data));
+      // console.log("response : " + response?.data);
+      // console.log("response : " + JSON.stringify(response?.data));
       sessionStorage.setItem("formData", JSON.stringify(formData));
       toast.success("OTP send successfully");
       router.push("/otp");

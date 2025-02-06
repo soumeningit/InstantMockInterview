@@ -71,7 +71,7 @@ function OTPVerification() {
         email: formData.email,
       };
       const response = await axios.post("/api/users/otpsender", data);
-      console.log("response : " + JSON.stringify(response));
+      // console.log("response : " + JSON.stringify(response));
       if (response?.data?.success) {
         toast.success("OTP Sended");
       } else {
@@ -89,8 +89,10 @@ function OTPVerification() {
           <div className="flex justify-center">
             <div className="max-w-md mx-auto text-center bg-white px-4 sm:px-8 py-10 rounded-xl shadow">
               <header className="mb-8">
-                <h1 className="text-2xl font-bold mb-1">OTP Verification</h1>
-                <p className="text-[15px] text-slate-500">
+                <h1 className="text-2xl font-bold mb-1 text-gray-900">
+                  OTP Verification
+                </h1>
+                <p className="text-[15px] text-slate-800">
                   Enter the 4-digit verification code that was sent to your
                   registered email.
                 </p>
@@ -118,7 +120,7 @@ function OTPVerification() {
                   </button>
                 </div>
               </form>
-              <div className="text-sm text-slate-500 mt-4">
+              <div className="text-sm text-slate-800 mt-4">
                 Didn't receive code?{" "}
                 <button
                   onClick={handleResend}
