@@ -6,8 +6,8 @@ const SpeechToText = ({ transcriptArraySize, selectedQuestionIndex, onSaveAnswer
     const [recognition, setRecognition] = useState(null);
     const [transcriptArray, setTranscriptArray] = useState([]); // Array to store each transcript
 
-    console.log("transcriptArraySize inside speechtotext : " + transcriptArraySize);
-    console.log("selectedQuestionIndex inside speechtotext : " + selectedQuestionIndex);
+    // console.log("transcriptArraySize inside speechtotext : " + transcriptArraySize);
+    // console.log("selectedQuestionIndex inside speechtotext : " + selectedQuestionIndex);
 
     // Speech Recognition Setup
     useEffect(() => {
