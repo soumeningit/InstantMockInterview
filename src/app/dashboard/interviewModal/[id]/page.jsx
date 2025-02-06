@@ -75,10 +75,10 @@ export default function Modal({ params }) {
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
                   <div className="flex flex-col gap-4 ">
-                    <h3 className="text-3xl font-semibold">
+                    <h3 className="text-3xl font-semibold text-zinc-600">
                       Tell us about your job role
                     </h3>
-                    <p className="text-sm">
+                    <p className="text-sm text-gray-600">
                       Add details about you job position, skills, year of
                       experience
                     </p>
@@ -108,7 +108,7 @@ export default function Modal({ params }) {
                         name="role"
                         value={formData.role}
                         onChange={changeHandler}
-                        className="p-2 rounded-md w-full bg-slate-50 border border-gray-300 outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-400 transition duration-200"
+                        className="p-2 rounded-md w-full bg-slate-50 text-gray-600 border border-gray-300 outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-400 transition duration-200"
                         placeholder="e.g., Frontend Developer"
                       />
                     </div>
@@ -125,7 +125,7 @@ export default function Modal({ params }) {
                         name="position"
                         value={formData.position}
                         onChange={changeHandler}
-                        className="p-4 w-full rounded-md bg-slate-50 border border-gray-300 outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-400 transition duration-200"
+                        className="p-4 w-full rounded-md bg-slate-50 text-gray-600 border border-gray-300 outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-400 transition duration-200"
                         placeholder="e.g., React, Node.js, CSS"
                       />
                     </div>
@@ -142,7 +142,7 @@ export default function Modal({ params }) {
                         name="experience"
                         value={formData.experience}
                         onChange={changeHandler}
-                        className="p-1 w-full rounded-md bg-slate-50 border border-gray-300 outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-400 transition duration-200"
+                        className="p-1 w-full rounded-md bg-slate-50 text-gray-600 border border-gray-300 outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-400 transition duration-200"
                         placeholder="e.g., 2"
                       />
                     </div>
