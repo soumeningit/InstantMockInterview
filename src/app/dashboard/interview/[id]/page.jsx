@@ -79,7 +79,9 @@ function Interview({ params }) {
 
   return (
     <div className="flex flex-col items-start mx-auto p-6 h-svh bg-gray-100">
-      <h1 className="text-3xl font-bold text-center mb-6">Let's Get Started</h1>
+      <h1 className="text-3xl font-bold text-center mb-6 text-teal-600">
+        Let's Get Started
+      </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[90%] rounded-lg">
         {/* left div */}
         <div className=" flex items-center justify-center flex-col">
@@ -135,7 +137,7 @@ function Interview({ params }) {
           </button>
           {showButton && (
             <>
-              <p className="text-base text-gray-950 mt-5">Record your answer</p>
+              <p className="text-base text-gray-950 mt-5">Click Start Button</p>
               <button
                 onClick={handleStartInterview}
                 className="px-2 py-1 text-base rounded-md hover-md bg-blue-500 hover:bg-blue-300 hover:shadow-lg transition duration-300 hover:scale-100"

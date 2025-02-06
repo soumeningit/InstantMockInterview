@@ -9,8 +9,9 @@ const SpeechToText = ({ transcriptArraySize, selectedQuestionIndex, onSaveAnswer
     console.log("transcriptArraySize inside speechtotext : " + transcriptArraySize);
     console.log("selectedQuestionIndex inside speechtotext : " + selectedQuestionIndex);
 
+    // Speech Recognition Setup
     useEffect(() => {
-        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition; // Ensures compatibility across different browsers.
         if (SpeechRecognition) {
             const recognitionInstance = new SpeechRecognition();
             recognitionInstance.continuous = true;
@@ -22,10 +23,11 @@ const SpeechToText = ({ transcriptArraySize, selectedQuestionIndex, onSaveAnswer
                 if (result.isFinal) {
                     const finalTranscript = result[0].transcript;
                     setTranscript(finalTranscript); // Set the latest transcript
-                    console.log(finalTranscript); // Print each result to console
+                    // console.log(finalTranscript); // Print each result to console
                 }
             };
 
+            //  If the microphone accidentally stops, restart it automatically if isListening is true.
             recognitionInstance.onend = () => {
                 if (isListening) {
                     recognitionInstance.start(); // Restart recognition if still listening
@@ -40,7 +42,7 @@ const SpeechToText = ({ transcriptArraySize, selectedQuestionIndex, onSaveAnswer
 
     const startListening = () => {
         setIsListening(true);
-        recognition.start();
+        recognition.start(); // Start the Speech Recognition
     };
 
     const stopListening = () => {
@@ -63,7 +65,7 @@ const SpeechToText = ({ transcriptArraySize, selectedQuestionIndex, onSaveAnswer
 
     return (
         <div className="max-w-lg mx-auto p-4 border rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold text-center mb-4">Speech to Text</h2>
+            {/* <h2 className="text-2xl font-bold text-center mb-4">Speech to Text</h2> */}
             <div className="flex justify-center space-x-4 mb-4">
                 <button
                     onClick={startListening}
@@ -80,7 +82,7 @@ const SpeechToText = ({ transcriptArraySize, selectedQuestionIndex, onSaveAnswer
                     Stop Listening
                 </button>
             </div>
-            <p className="border p-2 mb-4 rounded bg-gray-100">{transcript}</p>
+            {/* <p className="border p-2 mb-4 rounded bg-gray-100">{transcript}</p> */}
             <div className="flex space-x-4">
                 <button
                     onClick={handleNext}

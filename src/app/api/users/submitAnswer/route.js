@@ -73,7 +73,7 @@ export async function POST(req) {
         marks: a score out of 10 based on the quality of the user’s answer in relevance, completeness, and accuracy. 
         Make sure Please format your response in simple JSON without any special characters. `
         const result = await model.generateContent(prompt);
-        console.log("result : ", result);
+        // console.log("result : ", result);
         const responseFromAI = result.response.text();
         // let response = responseFromAI.replace(/[\\\n\r\t\v\f!@#$%^&*()\-_=+{}[\]|:";\'<>,.?~`]/g, '');
 
@@ -81,7 +81,8 @@ export async function POST(req) {
         // response = response.replace(/\s+/g, '');
 
         // // Parse the cleaned JSON string
-        let answer = JSON.parse(responseFromAI);
+        // let answer = JSON.parse(responseFromAI);
+        let answer = responseFromAI;
         console.log("answer : " + answer);
         console.log("responseFromAI : " + responseFromAI);
         let newResponse = {};

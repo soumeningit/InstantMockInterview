@@ -27,6 +27,7 @@ function ResetPassword() {
   };
 
   async function changePassword() {
+    let toastId = toast.loading("Loading....");
     try {
       const response = await axios.post("/api/users/resetpassword", {
         resetToken: token,
@@ -35,14 +36,19 @@ function ResetPassword() {
       // console.log("response : " + JSON.stringify(response));
       if (response?.data?.success) {
         setSuccessMessage("Password changed successfully");
+        toast.remove(toastId);
         toast.success("Password change Successfully");
         router.push("/login");
       } else {
         setError(response?.data?.message);
+        toast.dismiss(toastId);
         toast.error("Password reset failed!");
       }
     } catch (error) {
+      toast.remove(toastId);
       setError(error.message);
+    } finally {
+      toast.remove(toastId);
     }
   }
 

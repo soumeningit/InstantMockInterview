@@ -16,6 +16,7 @@ function ForgetPassword() {
   const submitHandle = async (e) => {
     setError("");
     e.preventDefault();
+    let toastId = toast.loading("Loading....");
     try {
       const response = await axios.post("/api/users/createresetpasswordtoken", {
         email,
@@ -24,13 +25,17 @@ function ForgetPassword() {
       setError("");
       console.log("response : ", response?.data);
       if (response?.status) {
+        toast.dismiss(toastId);
         toast.success("Successfully send Reset mail");
       } else {
         toast.error("Reset mail send failed");
       }
     } catch (error) {
+      toast.dismiss(toastId);
       setError(error.message);
       console.log("Forget-Password Token Error : " + error);
+    } finally {
+      toast.dismiss(toastId);
     }
   };
 

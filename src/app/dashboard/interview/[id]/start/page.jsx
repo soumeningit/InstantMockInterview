@@ -118,11 +118,11 @@ function InterviewFinal() {
     }
   };
 
-  console.log("answers in start : " + answers);
+  // console.log("answers in start : " + answers);
 
   return (
     <div className="flex flex-col items-start mx-auto p-6 h-svh bg-gray-100">
-      <h1 className="text-2xl font-semibold mb-4">Let’s start</h1>
+      <h1 className="text-2xl font-semibold mb-4 text-gray-600">Let’s start</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[90%] rounded-lg">
         {/* left part */}
         <div className="flex flex-row flex-wrap items-start w-[90%]">
@@ -181,7 +181,7 @@ function InterviewFinal() {
               </Link>
               <span className="text-red-500">
                 You can attempt each question once, but you can retake the same
-                iteview after once it get completed.
+                interview after once it get completed.
               </span>
             </p>
           </div>
@@ -220,9 +220,9 @@ function InterviewFinal() {
             ) : (
               <p
                 onClick={() => setIsRecording(!isRecording)}
-                className="text-sm text-gray-400 hover:text-gray-600"
+                className="text-sm text-gray-600 hover:text-gray-600"
               >
-                Start recording
+                Start Recording
               </p>
             )}
           </button>
@@ -243,7 +243,7 @@ function InterviewFinal() {
                   setIsVideo(!isVideo);
                   setShowVideo(!showVideo);
                 }}
-                className="text-sm text-gray-400 hover:text-gray-600"
+                className="text-sm text-gray-600 hover:text-gray-600"
               >
                 Show Video
               </p>

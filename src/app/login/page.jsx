@@ -39,7 +39,7 @@ function LoginPage() {
       } else {
         toast.error(response.data.message);
       }
-      console.log("response?.data?.user?._id : " + response?.data?.user?._id);
+      // console.log("response?.data?.user?._id : " + response?.data?.user?._id);
       // Redirect to dashboard
       router.push(`/dashboard/profile/${response?.data?.user?._id}`);
     } catch (error) {

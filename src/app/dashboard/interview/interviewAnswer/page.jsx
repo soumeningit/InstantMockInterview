@@ -6,7 +6,8 @@ import { useSelector } from "react-redux";
 
 function ShowAnswer() {
   const { interviewAnswer } = useSelector((state) => state.questionsandanswers); // Uncomment if using Redux
-
+  console.log("interviewAnswer : " + interviewAnswer);
+  console.log("interviewAnswer : " + JSON.stringify(interviewAnswer));
   const [dataId, setDataId] = useState(null);
   const [show, setShow] = useState(false);
 
